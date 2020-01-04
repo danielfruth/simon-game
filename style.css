@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background: #5b5a7a;
+}
+
+.title {
+  margin: auto;
+}
+
+.instructions {
+  margin: auto;
+}
+
+.game-board {
+  display: flex;
+  background: black;
+  min-height: 400px;
+  width: 400px;
+  margin: auto;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.green-button {
+  width: 40%;
+  height: 40%;
+  background: green;
+}
+.red-button {
+  width: 40%;
+  height: 40%;
+  background: red;
+}
+.yellow-button {
+  width: 40%;
+  height: 40%;
+  background: yellow;
+}
+.blue-button {
+  width: 40%;
+  height: 40%;
+  background: blue;
+}
