@@ -6,12 +6,14 @@ const blueButton = document.querySelector('.blue-button');
 const gameButtons = document.querySelector('.game-buttons');
 let compArray = [];
 let userArray = [];
+let winner = false;
 
 startButton.addEventListener('click', startGame);
 gameButtons.addEventListener('click', userInput);
 
 function startGame() {
   compArray = [];
+  userArray = [];
   let firstNum = Math.floor(Math.random() * 4);
   compArray.push(firstNum);
   console.log(firstNum);
@@ -65,21 +67,28 @@ function userInput(evt) {
     userArray.push(1);
   } else if (evt.target.className === 'yellow-button') {
     userArray.push(2);
-  } else {
+  } else if (evt.target.className === 'blue-button') {
     userArray.push(3);
   }
-  checkLength();
+  checkSolution();
 }
 
-function checkLength() {
+function checkSolution() {
   if (userArray.length === compArray.length) {
-    console.log('same length');
     for (let i = 0; i < compArray.length; i++) {
       if (userArray[i] === compArray[i]) {
-        console.log('winner!');
+        winner = true;
       } else {
-        console.log('loser!');
+        console.log('you lose');
+        alert('You lose! Click start to try again!');
+        return (winner = false);
       }
+    }
+    if ((winner = true)) {
+      let nextNum = Math.floor(Math.random() * 4);
+      compArray.push(nextNum);
+      userArray = [];
+      lightButtons();
     }
   }
 }
