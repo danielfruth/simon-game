@@ -70,3 +70,16 @@ function userInput(evt) {
   }
   checkLength();
 }
+
+function checkLength() {
+  if (userArray.length === compArray.length) {
+    console.log('same length');
+    for (let i = 0; i < compArray.length; i++) {
+      if (userArray[i] === compArray[i]) {
+        console.log('winner!');
+      } else {
+        console.log('loser!');
+      }
+    }
+  }
+}
