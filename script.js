@@ -4,14 +4,54 @@ const redButton = document.querySelector('.red-button');
 const yellowButton = document.querySelector('.yellow-button');
 const blueButton = document.querySelector('.blue-button');
 const gameButtons = document.querySelector('.game-buttons');
+const gameBoard = document.querySelector('.game-board');
+const instructions = document.querySelector('.instructions');
+const paragraph = document.querySelector('.paragraph');
+
 let compArray = [];
 let userArray = [];
 let winner = false;
 
 startButton.addEventListener('click', startGame);
+instructions.addEventListener('click', peek);
 gameButtons.addEventListener('click', userInput);
+gameButtons.addEventListener('mousedown', highlight);
+gameButtons.addEventListener('mouseup', removeHighlight);
+gameButtons.addEventListener('mouseout', removeHighlight);
+
+function peek() {
+  paragraph.style.display = 'block';
+  gameBoard.style.display = 'none';
+  instructions.style.display = 'none';
+}
+
+function highlight(evt) {
+  if (evt.target.className === 'green-button') {
+    greenButton.style.background = '#75ff79';
+  } else if (evt.target.className === 'red-button') {
+    redButton.style.background = '#ff7a83';
+  } else if (evt.target.className === 'yellow-button') {
+    yellowButton.style.background = '#ffffb5';
+  } else if (evt.target.className === 'blue-button') {
+    blueButton.style.background = '#7c83ff';
+  }
+}
+function removeHighlight(evt) {
+  if (evt.target.className === 'green-button') {
+    greenButton.style.background = 'green';
+  } else if (evt.target.className === 'red-button') {
+    redButton.style.background = 'red';
+  } else if (evt.target.className === 'yellow-button') {
+    yellowButton.style.background = 'yellow';
+  } else if (evt.target.className === 'blue-button') {
+    blueButton.style.background = 'blue';
+  }
+}
 
 function startGame() {
+  paragraph.style.display = 'none';
+  gameBoard.style.display = 'flex';
+  instructions.style.display = 'block';
   compArray = [];
   userArray = [];
   let firstNum = Math.floor(Math.random() * 4);
