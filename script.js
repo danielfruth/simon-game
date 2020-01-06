@@ -3,10 +3,12 @@ const greenButton = document.querySelector('.green-button');
 const redButton = document.querySelector('.red-button');
 const yellowButton = document.querySelector('.yellow-button');
 const blueButton = document.querySelector('.blue-button');
+const gameButtons = document.querySelector('.game-buttons');
 let compArray = [];
 let userArray = [];
 
 startButton.addEventListener('click', startGame);
+gameButtons.addEventListener('click', userInput);
 
 function startGame() {
   compArray = [];
@@ -54,4 +56,17 @@ function lightMe(buttonNum, i) {
       }, 1000);
     }
   }, i * 1000);
+}
+
+function userInput(evt) {
+  if (evt.target.className === 'green-button') {
+    userArray.push(0);
+  } else if (evt.target.className === 'red-button') {
+    userArray.push(1);
+  } else if (evt.target.className === 'yellow-button') {
+    userArray.push(2);
+  } else {
+    userArray.push(3);
+  }
+  checkLength();
 }
