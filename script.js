@@ -56,7 +56,6 @@ function startGame() {
   userArray = [];
   let firstNum = Math.floor(Math.random() * 4);
   compArray.push(firstNum);
-  console.log(firstNum);
   lightButtons();
 }
 
