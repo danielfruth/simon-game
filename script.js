@@ -42,7 +42,7 @@ function removeHighlight(evt) {
   } else if (evt.target.className === 'red-button') {
     redButton.style.background = 'red';
   } else if (evt.target.className === 'yellow-button') {
-    yellowButton.style.background = 'yellow';
+    yellowButton.style.background = '#cece00';
   } else if (evt.target.className === 'blue-button') {
     blueButton.style.background = 'blue';
   }
