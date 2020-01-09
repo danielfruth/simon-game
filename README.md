@@ -41,4 +41,4 @@ A standard implementation of:
 ## Contributions
 
 To contribute to this game, please only use lnaguages as already provided. Any improvements, bug find or fixes, or suggested improvements are to be added to this repo as an issue.
-![issues](https://github.com/danielfruth/simon-game/issues)
+[issues](https://github.com/danielfruth/simon-game/issues)
