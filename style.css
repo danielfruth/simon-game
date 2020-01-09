@@ -5,6 +5,7 @@ body {
   background-size: 2000px;
 }
 
+/* title design */
 .title {
   margin: auto;
   color: white;
@@ -16,6 +17,7 @@ body {
   text-decoration: underline;
 }
 
+/* button for instructions. goes away when pressed */
 .instructions {
   margin: auto;
   color: #fceeb8;
@@ -25,6 +27,7 @@ body {
   background: black;
 }
 
+/* contains full game */
 .game-board {
   display: flex;
   background: black;
@@ -35,6 +38,7 @@ body {
   border: 4px solid #232323;
 }
 
+/* contains buttons for game and helps with placement */
 .game-buttons {
   display: flex;
   justify-content: space-evenly;
@@ -52,7 +56,8 @@ body {
   display: flex;
   flex-direction: row-reverse;
 }
-
+/*  above and below sections are connected in that they
+style the buttons */
 .cover-green {
   width: 100px;
   height: 100px;
@@ -123,6 +128,7 @@ body {
   border-radius: 0 0 100px 0;
 }
 
+/* initialize button */
 .start-button {
   width: 100px;
   height: 40px;
@@ -133,6 +139,8 @@ body {
   color: #fceeb8;
 }
 
+/* instructions that remain hidden unless called
+game will not play while shown */
 .paragraph {
   display: none;
   max-width: 600px;

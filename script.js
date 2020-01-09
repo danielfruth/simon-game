@@ -8,6 +8,7 @@ const gameBoard = document.querySelector('.game-board');
 const instructions = document.querySelector('.instructions');
 const paragraph = document.querySelector('.paragraph');
 
+// will store user and computer inputs
 let compArray = [];
 let userArray = [];
 let winner = false;
@@ -19,12 +20,16 @@ gameButtons.addEventListener('mousedown', highlight);
 gameButtons.addEventListener('mouseup', removeHighlight);
 gameButtons.addEventListener('mouseout', removeHighlight);
 
+// this function makes it possible to view the instructions on
+// the same page, without  distraction.
 function peek() {
   paragraph.style.display = 'block';
   gameBoard.style.display = 'none';
   instructions.style.display = 'none';
 }
 
+// only runs for visible interaction. does not affect game logic.
+// lights up buttons when clicked.
 function highlight(evt) {
   if (evt.target.className === 'green-button') {
     greenButton.style.background = '#75ff79';
@@ -36,6 +41,8 @@ function highlight(evt) {
     blueButton.style.background = '#7c83ff';
   }
 }
+
+// same as above, does not affect game logic.
 function removeHighlight(evt) {
   if (evt.target.className === 'green-button') {
     greenButton.style.background = 'green';
@@ -48,6 +55,7 @@ function removeHighlight(evt) {
   }
 }
 
+// initailize game
 function startGame() {
   paragraph.style.display = 'none';
   gameBoard.style.display = 'flex';
@@ -59,6 +67,7 @@ function startGame() {
   lightButtons();
 }
 
+// shows off light sequence provided only by computer
 function lightButtons() {
   compArray.forEach(lightMe);
 }
@@ -99,6 +108,7 @@ function lightMe(buttonNum, i) {
   }, i * 1000);
 }
 
+// takes in user sequence to be stored.
 function userInput(evt) {
   if (evt.target.className === 'green-button') {
     userArray.push(0);
@@ -112,6 +122,7 @@ function userInput(evt) {
   checkSolution();
 }
 
+// progression. first, checks to see if user sequence is as long as the computer's, then checks to see if the sequences are the same. results in progression, or loss.
 function checkSolution() {
   if (userArray.length === compArray.length) {
     for (let i = 0; i < compArray.length; i++) {
