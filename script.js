@@ -5,8 +5,9 @@ const yellowButton = document.querySelector('.yellow-button');
 const blueButton = document.querySelector('.blue-button');
 const gameButtons = document.querySelector('.game-buttons');
 const gameBoard = document.querySelector('.game-board');
+const instructionsButton = document.querySelector('.instructions-button');
 const instructions = document.querySelector('.instructions');
-const paragraph = document.querySelector('.paragraph');
+const loser = document.querySelector('.loser-message');
 
 // will store user and computer inputs
 let compArray = [];
@@ -14,7 +15,7 @@ let userArray = [];
 let winner = false;
 
 startButton.addEventListener('click', startGame);
-instructions.addEventListener('click', peek);
+instructionsButton.addEventListener('click', peek);
 gameButtons.addEventListener('click', userInput);
 gameButtons.addEventListener('mousedown', highlight);
 gameButtons.addEventListener('mouseup', removeHighlight);
@@ -23,9 +24,9 @@ gameButtons.addEventListener('mouseout', removeHighlight);
 // this function makes it possible to view the instructions on
 // the same page, without  distraction.
 function peek() {
-  paragraph.style.display = 'block';
+  instructions.style.display = 'block';
   gameBoard.style.display = 'none';
-  instructions.style.display = 'none';
+  instructionsButton.style.display = 'none';
 }
 
 // only runs for visible interaction. does not affect game logic.
@@ -57,9 +58,10 @@ function removeHighlight(evt) {
 
 // initailize game
 function startGame() {
-  paragraph.style.display = 'none';
+  instructions.style.display = 'none';
   gameBoard.style.display = 'flex';
-  instructions.style.display = 'block';
+  instructionsButton.style.display = 'block';
+  loser.style.display = 'none';
   compArray = [];
   userArray = [];
   let firstNum = Math.floor(Math.random() * 4);
@@ -129,8 +131,9 @@ function checkSolution() {
       if (userArray[i] === compArray[i]) {
         winner = true;
       } else {
-        console.log('you lose');
-        alert('You lose! Click start to try again!');
+        loser.style.display = 'block';
+        gameBoard.style.display = 'none';
+        instructions.style.display = 'none';
         return (winner = false);
       }
     }

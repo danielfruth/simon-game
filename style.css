@@ -31,7 +31,7 @@ body {
 }
 
 /* button for instructions. goes away when pressed */
-.instructions {
+.instructions-button {
   margin: auto;
   color: #fceeb8;
   display: block;
@@ -57,10 +57,9 @@ body {
 
 /* instructions that remain hidden unless called
 game will not play while shown */
-.paragraph {
+.instructions {
   display: none;
   max-width: 600px;
-  font-size: 1.5em;
   margin: 75px auto 20px;
   text-align: center;
   color: white;
@@ -68,6 +67,38 @@ game will not play while shown */
   border: 4px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
   border-radius: 20px;
+}
+
+.instructions-head {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.8em;
+}
+
+.instructions-text {
+  font-size: 1em;
+  color: #fceeb8;
+}
+
+.loser-message {
+  display: none;
+  background: rgba(58, 58, 58, 0.5);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.loser-head {
+  font-size: 3em;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.loser-text {
+  color: #fceeb8;
 }
 
 /* contains buttons for game and helps with placement */

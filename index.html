@@ -13,16 +13,23 @@
   </head>
   <body>
     <h1 class="title">Simple Simon</h1>
-    <button class="instructions">INSTRUCTIONS</button>
-    <p class="paragraph">
-      Welcome to Simon! Simon is a memory game in which you match colors with
-      Simon.<br /><br />To play, press start, and wait for Simon to light up a
-      button. Press the same buttton as Simon and then wait for Simon to light
-      up the first button, with an additional button immediately after.<br /><br />Each
-      round you will have to press the buttons in the correct order, and after
-      each correct attempt, Simon will add another to the sequence. You lose
-      when your sequence doesn't match Simon's.<br /><br />Good luck!
-    </p>
+    <button class="instructions-button">INSTRUCTIONS</button>
+    <div class="instructions">
+      <p class="instructions-head">INSTRUCTIONS</p>
+      <p class="instructions-text">
+        Welcome to Simon! Simon is a memory game in which you match colors with
+        Simon.<br /><br />To play, press start, and wait for Simon to light up a
+        button. Press the same buttton as Simon and then wait for Simon to light
+        up the first button, with an additional button immediately after.<br /><br />Each
+        round you will have to press the buttons in the correct order, and after
+        each correct attempt, Simon will add another to the sequence. You lose
+        when your sequence doesn't match Simon's.<br /><br />Good luck!
+      </p>
+    </div>
+    <div class="loser-message">
+      <p class="loser-head">You Lose!</p>
+      <p class="loser-text">Please press start to try again.</p>
+    </div>
     <div class="game-board">
       <div class="game-buttons">
         <div class="green-button">
