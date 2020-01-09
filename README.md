@@ -29,8 +29,8 @@ Functions yet to be added:
 
 - A sound to be played during either button press or sequence play.
 - A scoreboard displaying both current score, and all-time high score.
-- Additional font changes.
-- A native screen to pop-up when user loses.
+- ~~Font changes.~~
+- ~~A native screen to pop-up when user loses.~~
 
 ## Technologies Used
 
