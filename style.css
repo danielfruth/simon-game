@@ -214,4 +214,7 @@ style the buttons */
   .loser-head {
     font-size: 1.5em;
   }
+  .instructions-button {
+    width: 150px;
+  }
 }
