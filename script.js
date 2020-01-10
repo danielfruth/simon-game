@@ -14,7 +14,13 @@ let compArray = [];
 let userArray = [];
 let winner = false;
 let currentScore = document.querySelector('#score-num');
+let currentHighScore = document.querySelector('#highscore-num');
+let storedHighScore = localStorage.getItem('playerHighScore');
 let playerScore = 0;
+let playerHighScore = 0;
+
+// sets high score to saved value
+currentHighScore.innerText = storedHighScore;
 
 startButton.addEventListener('click', startGame);
 instructionsButton.addEventListener('click', peek);
@@ -148,6 +154,12 @@ function checkSolution() {
       lightButtons();
       playerScore += 1;
       currentScore.innerText = playerScore;
+      if (playerScore >= storedHighScore) {
+        playerHighScore = playerScore;
+        localStorage.setItem('playerHighScore', playerScore);
+        storedHighScore = parseInt(localStorage.getItem('playerHighScore'));
+        currentHighScore.innerText = storedHighScore;
+      }
     }
   }
 }
