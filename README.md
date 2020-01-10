@@ -9,7 +9,7 @@ game with a simple, clean design.
 
 ## Features
 
-This game features reactive, light up buttons that will respond when clicked or held. Also featured under the instructions button, is a pop-up set of instructions that are in no way impeded by the game boprad, so you can read them in peace. when starting the game, the instructions will automatically find themselves back under the instructions button for later use.
+This game features reactive, light up buttons that will respond when clicked or held. Also featured under the instructions button, is a pop-up set of instructions that are in no way impeded by the game board, so you can read them in peace. when starting the game, the instructions will automatically find themselves back under the instructions button for later use. New features include, a dynamic scoreboard that saves your highscore, even when exiting the browser. Also, a custom pop-up for when the player loses, instead of an alert message.
 
 ## Bronze Level
 
@@ -28,7 +28,7 @@ At gold level, there is still some left to be desired for future updates. As of 
 Functions yet to be added:
 
 - A sound to be played during either button press or sequence play.
-- A scoreboard displaying both current score, and all-time high score.
+- ~~A scoreboard displaying both current score, and all-time high score.~~
 - ~~Font changes.~~
 - ~~A native screen to pop-up when user loses.~~
 

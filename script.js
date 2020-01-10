@@ -20,7 +20,9 @@ let playerScore = 0;
 let playerHighScore = 0;
 
 // sets high score to saved value
-currentHighScore.innerText = storedHighScore;
+if (storedHighScore) {
+  currentHighScore.innerText = storedHighScore;
+}
 
 startButton.addEventListener('click', startGame);
 instructionsButton.addEventListener('click', peek);
@@ -70,6 +72,8 @@ function startGame() {
   gameBoard.style.display = 'flex';
   instructionsButton.style.display = 'block';
   loser.style.display = 'none';
+  playerScore = 0;
+  currentScore.innerText = playerScore;
   compArray = [];
   userArray = [];
   let firstNum = Math.floor(Math.random() * 4);
