@@ -19,12 +19,20 @@ body {
   font-family: 'Varela Round', sans-serif;
 }
 
+.scores {
+  font-size: 1em;
+  color: white;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* button for instructions. goes away when pressed */
 .instructions-button {
   margin: auto;
   color: #fceeb8;
   display: block;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 50px;
   background: black;
   width: 100px;
